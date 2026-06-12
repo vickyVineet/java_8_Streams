@@ -22,7 +22,7 @@ class CheckDuplicate{
      
     public Boolean checkDuplicateNum(List<Integer> nums){
         HashSet<Integer> set = new HashSet();
-        return nums.stream().anyMatch(ch -> set.add(ch));
+        return nums.stream().anyMatch(ch -> !set.add(ch));
     }
     
 }
